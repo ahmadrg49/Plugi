@@ -4,7 +4,7 @@
     Plugin Name: taskPlugin
     description: >-
     Setting up configurable fields for our plugin.
-    Author: Matthew Ray
+    Author: Ahmad Gharib
     Version: 1.0.0
 */
 
@@ -129,7 +129,7 @@ function changeNameShortcode($name) {
     
     // check what type user entered
     $name = $args['name'];
-    $h = 'Hello! ';
+    $h = 'Hello ';
     if (!empty($name)) {
     switch ($name) {
         case get_option('shortcode_name'):
