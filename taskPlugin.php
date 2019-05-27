@@ -25,7 +25,7 @@ class TaskPlugin_Fields {
 
     public function create_plugin_settings_page() {
     // Add the menu item and page
-    $page_title = 'My Settings Page';
+    $page_title = 'Settings Panel';
     $menu_title = 'TaskPlugin';
     $capability = 'manage_options';
     $slug = 'smashing_fields';
@@ -33,14 +33,14 @@ class TaskPlugin_Fields {
     $icon = 'dashicons-admin-plugins';
     $position = 100;
 
-    add_menu_page( $page_title, $menu_title, $capability, $slug, $callback, $icon, $position );
+    add_menu_page( $page_title, $menu_titlse, $capability, $slug, $callback, $icon, $position );
 
     }
 
 
     public function plugin_settings_page_content() { ?>
     <div class="wrap">
-        <h2>TaskPlugin</h2>
+        <h2 style="color:red">TaskPlugin</h2>
         <form method="post" action="options.php">
             <?php
                 settings_fields( 'smashing_fields' );
@@ -74,7 +74,7 @@ class TaskPlugin_Fields {
                     'section' => 'our_first_section',
                     'type' => 'text',
                     'options' => false,
-                    'placeholder' => 'Choose the name',
+                    'placeholder' => 'Choose a name',
                     'helper' => 'Does this help?',
                     'supplemental' => 'I am underneath!',
                     'default' => ''
@@ -85,7 +85,7 @@ class TaskPlugin_Fields {
                     'section' => 'our_first_section',
                     'type' => 'text',
                     'options' => false,
-                    'placeholder' => 'Choose the name',
+                    'placeholder' => 'Choose a name',
                     'helper' => 'Does this help?',
                     'supplemental' => 'I am underneath!',
                     'default' => ''
